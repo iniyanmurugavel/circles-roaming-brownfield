@@ -52,7 +52,7 @@ dependencies {
 
 | Version | Notes |
 |---|---|
-| `v1.0.0` | Initial release — Circles Roaming brownfield flow |
+| `1.0.0` | Initial release — Circles Roaming brownfield flow |
 
 ## Updating the AAR
 
