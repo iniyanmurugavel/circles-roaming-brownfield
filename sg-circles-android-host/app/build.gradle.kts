@@ -49,7 +49,7 @@ dependencies {
   // Keep only the Circles SDK as a local AAR. Everything else resolves as
   // normal Gradle dependencies from Maven repositories.
   // implementation(mapOf("name" to "circles-travel-pass-sdk-1.0.0", "ext" to "aar"))
-  implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.2")
+  implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.0")
 
   implementation("androidx.activity:activity:1.13.0")
   implementation("androidx.activity:activity-compose:1.13.0")
@@ -62,12 +62,10 @@ dependencies {
   implementation("com.facebook.react:react-android:0.83.4")
   implementation("com.facebook.hermes:hermes-android:0.14.1")
 
-  implementation(platform("androidx.compose:compose-bom:2026.02.01"))
+  implementation(platform("androidx.compose:compose-bom:2026.03.01"))
   implementation("androidx.compose.ui:ui")
   implementation("androidx.compose.material3:material3")
   implementation("androidx.compose.material:material-icons-core")
   implementation("androidx.compose.ui:ui-tooling-preview")
   debugImplementation("androidx.compose.ui:ui-tooling")
-
-  // implementation("com.circles.telco:circles-travel-pass-sdk:1.0.0")
 }
