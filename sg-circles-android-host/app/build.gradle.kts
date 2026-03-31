@@ -50,6 +50,10 @@ dependencies {
   // so Gradle will automatically resolve Expo and React Native transitively.
   implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.2")
 
+  implementation("host.exp.exponent:expo.core:55.0.9")
+  implementation("com.facebook.react:react-android:0.83.4")
+  implementation("com.facebook.hermes:hermes-android:0.14.1")
+
   implementation("androidx.activity:activity:1.13.0")
   implementation("androidx.activity:activity-compose:1.13.0")
   implementation("com.google.android.material:material:1.13.0")
