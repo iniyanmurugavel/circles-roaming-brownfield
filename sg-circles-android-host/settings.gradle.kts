@@ -12,14 +12,14 @@ dependencyResolutionManagement {
     google()
     mavenCentral()
 
-    // ── SDK Resolution Toggle ──────────────────────────────────────────
-    // LOCAL TESTING:  Uncomment mavenLocal() to test a locally-published
-    //   SDK snapshot before pushing to JitPack.
-    //   Publish first:  cd sg-circles-android-sdk && ./gradlew clean publishToMavenLocal
-    // PRODUCTION:      Comment out mavenLocal() and use JitPack only.
-    //   Never ship a build that resolves from mavenLocal().
-    // mavenLocal()  // ← uncomment for local SDK verification only
-    maven(url = "https://www.jitpack.io")  // ← production remote resolution
+    // ── SDK Resolution: LOCAL TESTING BRANCH ─────────────────────────
+    // This branch resolves the SDK from Maven Local (~/.m2).
+    // Publish first:  cd sg-circles-android-sdk && ./gradlew clean publishToMavenLocal
+    //
+    // ⚠️  DO NOT merge this branch into main/production.
+    //     Switch to main branch for JitPack (remote) resolution.
+    mavenLocal()  // ← ACTIVE: resolves SDK from ~/.m2
+    maven(url = "https://www.jitpack.io")  // ← fallback for other deps
     flatDir {
       dirs("$rootDir/app/libs")
     }
