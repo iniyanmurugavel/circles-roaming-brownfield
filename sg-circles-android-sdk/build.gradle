@@ -65,3 +65,7 @@ publishing {
         }
     }
 }
+
+// JitPack calls 'assemble' by default. Since this isn't a full Android project,
+// we provide a dummy task so the build doesn't fail.
+task assemble {}
