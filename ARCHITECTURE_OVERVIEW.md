@@ -12,9 +12,9 @@ This project uses a **Brownfield Shared SDK Architecture**. This means the featu
 
 ### 2. `sg-circles-android-sdk` (The Delivery Repo)
 - **Role**: This is the **Distribution Repository**.
-- **What's inside**: A dedicated native Android Library project (`circles-travel-pass-sdk`) that packages the React Native feature into a versioned **AAR (Android Archive)**.
-- **Why it's needed**: It converts your React Native code into a format that a native Android developer can use just like any other library (like Retrofit or Glide). 
-- **Usage**: This repo handles the "packaging and shipping" of the feature.
+- **What's inside**: A flattened, standalone Android Library project that packages the React Native feature into a versioned **AAR (Android Archive)**.
+- **Why it's needed**: It converts your React Native code into a format that a native Android developer can use just like any other library.
+- **Usage**: This repo handles the "packaging and shipping" of the feature directly at its root.
 
 ### 3. `sg-circles-android-host` (The Consumer Repo)
 - **Role**: This is the **Native Host App**.
@@ -33,7 +33,7 @@ You might wonder why we don't just use the `android` code inside the React Nativ
 
 ### 2. Team Independence (Governance)
 - **The Problem**: Native App teams (e.g., the "Core App" team) don't want to manage React Native versions or Expo updates.
-- **The Scalable Solution**: The Feature team (React Native) manages their own lifecycle. They produce a "stable" SDK version (e.g., `1.0.2`), and the Native team adopts it only when they are ready. This prevents a change in the RN repo from accidentally breaking the Main App.
+- **The Scalable Solution**: The Feature team (React Native) manages their own lifecycle. They produce a "stable" SDK version (e.g., `1.0.0`), and the Native team adopts it only when they are ready. This prevents a change in the RN repo from accidentally breaking the Main App.
 
 ### 3. Repository Ownership
 - In many large companies, the **Search** feature, **Payment** feature, and **Roaming** feature are owned by different teams.

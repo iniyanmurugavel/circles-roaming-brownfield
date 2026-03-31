@@ -6,19 +6,20 @@ This document explains how to release a new version of the **Circles Travel Pass
 
 To provide a new SDK version, you need to increment the version numbers in the SDK's `build.gradle` file.
 
-1. Open `sg-circles-android-sdk/circles-travel-pass-sdk/build.gradle`.
-2. Update the `version` property at the top of the file:
+1. Open `sg-circles-android-sdk/build.gradle`.
+2. Update the `version` property:
    ```gradle
-   group   = 'com.circles.telco'
-   version = '1.0.2' // Increment this
+   group   = 'com.github.iniyanmurugavel'
+   version = '1.0.0' // Increment this
    ```
 3. Update the `version` property inside the `publishing` block:
    ```gradle
    publishing {
        publications {
            aar(MavenPublication) {
-               // ...
-               version = '1.0.2' // Match the version above
+               groupId    = 'com.github.iniyanmurugavel'
+               artifactId = 'sg-circles-android-sdk'
+               version    = '1.0.0' // Match the version above
            }
        }
    }
@@ -40,11 +41,11 @@ For production, you must always provide a **Signed Release AAR**. This ensures t
 ## 3. Distribute the SDK AAR
 
 Once you have the signed AAR:
-1. Rename it to match the version (e.g., `circles-travel-pass-sdk-1.0.2.aar`).
-2. Move it into the `sg-circles-android-sdk/circles-travel-pass-sdk/` directory.
-3. Update the `artifact` reference in the SDK's `build.gradle`:
+1. Rename it to match the version (e.g., `circles-travel-pass-sdk-1.0.0.aar`).
+2. Move it into the `sg-circles-android-sdk/` root directory.
+3. Update the `artifact` reference in the SDK's root `build.gradle`:
    ```gradle
-   artifact("circles-travel-pass-sdk-1.0.2.aar")
+   artifact("circles-travel-pass-sdk-1.0.0.aar")
    ```
 
 ## 5. Internal Testing
@@ -74,7 +75,7 @@ Deploying to **JitPack** is the standard way to share this SDK across different 
 
 ### How to use JitPack:
 1. Ensure your SDK repository (`sg-circles-android-sdk`) has a clean `build.gradle` that applies the `maven-publish` plugin.
-2. Tag a release on GitHub (e.g., `v1.0.2`).
+2. Tag a release on GitHub (e.g., `v1.0.0`).
 3. In the **Host App**, add the JitPack repository and the dependency:
    ```kotlin
    // settings.gradle.kts
@@ -85,7 +86,7 @@ Deploying to **JitPack** is the standard way to share this SDK across different 
    }
 
    // app/build.gradle.kts
-   dependencies {
-       implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.2")
-   }
+    dependencies {
+        implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.0")
+    }
    ```
