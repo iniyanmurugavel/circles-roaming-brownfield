@@ -18,6 +18,15 @@ This workspace has two essential components:
 3. **`sg-circles-android-sdk/`** (🔥 **The JitPack Distribution Repo**)
    A flattened, standalone repository containing the pre-built Android AAR for distribution via JitPack.
 
+## JitPack Resolution Walkthrough
+The SDK is distributed via JitPack. Follow these steps to integrate it into your host application:
+1. **Add JitPack Repository**: Ensure `https://jitpack.io` is in your root `build.gradle` or `settings.gradle`.
+2. **Add Dependency**:
+   ```kotlin
+   implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.1")
+   ```
+3. **Verify**: Check the [JitPack Dashboard](https://jitpack.io/#iniyanmurugavel/sg-circles-android-sdk) for build status.
+
 ## Setup & Running the Project
 
 ### 1. The Expo React Native App (SDK Source)
