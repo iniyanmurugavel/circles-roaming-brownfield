@@ -13,9 +13,10 @@ This workspace has two essential components:
    The shared React Native / Expo source code. This is where 100% of the cross-platform logic and UI is developed. When built, it generates the native AAR/XCFramework libraries.
 
 2. **`sg-circles-android-host/`** (🔥 **The Native Android Host App**)
-   A fully native Android app that consumes the generated SDK from `circles-sg-rn-expo`. This is the integration proof point.
+   A fully native Android app that consumes the generated SDK. This is the integration proof point for Android.
 
-> **Note:** The SDK distribution registries (`sg-circles-android-sdk`, `sg-circles-ios-sdk`) have been removed from this local workspace. In production, artifacts are published to remote Maven (JitPack / GitHub Packages) or a Swift Package registry. See `RELEASE_PLAN.md` for the full publishing guide.
+3. **`sg-circles-android-sdk/`** (🔥 **The JitPack Distribution Repo**)
+   A flattened, standalone repository containing the pre-built Android AAR for distribution via JitPack.
 
 ## Setup & Running the Project
 
