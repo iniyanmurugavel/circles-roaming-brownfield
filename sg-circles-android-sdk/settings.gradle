@@ -1,2 +1,1 @@
 rootProject.name = 'sg-circles-android-sdk'
-include ':circles-travel-pass-sdk'
