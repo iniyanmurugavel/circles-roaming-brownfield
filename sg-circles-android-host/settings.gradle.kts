@@ -12,6 +12,7 @@ dependencyResolutionManagement {
     google()
     mavenCentral()
     mavenLocal()
+    maven(url = "https://www.jitpack.io")
     flatDir {
       dirs("$rootDir/app/libs")
     }
