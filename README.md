@@ -23,7 +23,7 @@ The SDK is distributed via JitPack. Follow these steps to integrate it into your
 1. **Add JitPack Repository**: Ensure `https://jitpack.io` is in your root `build.gradle` or `settings.gradle`.
 2. **Add Dependency**:
    ```kotlin
-   implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.0")
+   implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.1")
    ```
 3. **Verify**: Check the [JitPack Dashboard](https://jitpack.io/#iniyanmurugavel/sg-circles-android-sdk) for build status.
 
