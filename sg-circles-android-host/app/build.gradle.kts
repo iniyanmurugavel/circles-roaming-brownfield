@@ -48,8 +48,8 @@ kotlin {
 dependencies {
   // Keep only the Circles SDK as a local AAR. Everything else resolves as
   // normal Gradle dependencies from Maven repositories.
-  // implementation(mapOf("name" to "circles-travel-pass-sdk-1.0.0", "ext" to "aar"))
-  implementation("com.github.iniyanmurugavel:sg-circles-android-sdk:1.0.2")
+  implementation(mapOf("name" to "circles-travel-pass-sdk-1.0.0", "ext" to "aar"))
+
 
   implementation("androidx.activity:activity:1.13.0")
   implementation("androidx.activity:activity-compose:1.13.0")
@@ -59,8 +59,8 @@ dependencies {
   // its first-level dependencies explicitly and let Gradle resolve the
   // transitive graph from Maven repositories.
   implementation("host.exp.exponent:expo.core:55.0.9")
-  implementation("com.facebook.react:react-android:0.83.4")
-  implementation("com.facebook.hermes:hermes-android:0.14.1")
+  implementation("com.facebook.react:react-android:0.84.1")
+  implementation("com.facebook.hermes:hermes-android:250829098.0.10")
 
   implementation(platform("androidx.compose:compose-bom:2026.03.01"))
   implementation("androidx.compose.ui:ui")

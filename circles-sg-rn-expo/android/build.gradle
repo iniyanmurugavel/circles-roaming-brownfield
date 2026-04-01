@@ -22,18 +22,23 @@ allprojects {
 }
 
 apply plugin: "expo-root-project"
-apply plugin: "expo-brownfield-publish"
+// apply plugin: "expo-brownfield-publish"
 apply plugin: "com.facebook.react.rootproject"
 
+/*
 expoBrownfieldPublishPlugin {
   libraryName = "circles-travel-pass-sdk"
   publications {
+    localDefault {
+      type.set("localMaven")
+    }
     githubPackages {
-        type.set("remotePrivate")
-        url.set(providers.environmentVariable("CIRCLES_MAVEN_URL").orElse(""))
-        username.set(providers.environmentVariable("CIRCLES_MAVEN_USERNAME").orElse(""))
-        password.set(providers.environmentVariable("CIRCLES_MAVEN_PASSWORD").orElse(""))
-        allowInsecure.set(false)
+      type.set("remotePrivate")
+      url.set(providers.environmentVariable("CIRCLES_MAVEN_URL").orElse(""))
+      username.set(providers.environmentVariable("CIRCLES_MAVEN_USERNAME").orElse(""))
+      password.set(providers.environmentVariable("CIRCLES_MAVEN_PASSWORD").orElse(""))
+      allowInsecure.set(false)
     }
   }
 }
+*/

@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     // ⚠️  DO NOT merge this branch into main/production.
     //     Switch to main branch for JitPack (remote) resolution.
     mavenLocal()  // ← ACTIVE: resolves SDK from ~/.m2
-    maven(url = "https://www.jitpack.io")  // ← fallback for other deps
+    maven(url = "https://www.jitpack.io")
     flatDir {
       dirs("$rootDir/app/libs")
     }

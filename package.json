@@ -1,0 +1,10 @@
+{
+  "name": "sg-expo-rn-brownfield-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:android:debug": "npm run build:android:debug --prefix circles-sg-rn-expo",
+    "build:android:release": "npm run build:android:release --prefix circles-sg-rn-expo",
+    "build:ios:real": "npm run build:ios:real --prefix circles-sg-rn-expo"
+  }
+}
